@@ -89,6 +89,33 @@ int main(){
 }
 
 
+// example
+#include<iostream>
+using namespace std;
+class tcs{
+    string enrollno;
+    string name;
+    float percentage;
+    static string collegename;
+    public:
+    tcs(string enrollno,string name,float percentage){
+        this->enrollno=enrollno;
+        this->name=name;
+        this->percentage=percentage;
+    }
+    void display(){
+        cout<<enrollno<<" "<<name<<" "<<collegename<<" "<<percentage<<endl;
+    }
+};
+string tcs::collegename="JECRC";
+int main(){
+    tcs s1=tcs("23BCAN0170","Yash",98.2);
+    tcs s2=tcs("23BCAN0214","Vansh",12.1);
+    s1.display();
+    s2.display();
+}
+
+
 
 
 
