@@ -115,6 +115,50 @@ int main(){
     s2.display();
 }
 
+// Access specifier
+
+//  private:
+//  We cannot access private data member and memeber function outside of the class
+#include<iostream>
+using namespace std;
+class test{
+    private:
+    int a;
+};
+int main(){
+    test t;
+    cout<<t.a; // compile time error
+}
+
+// protected
+class test{
+    protected:
+};
+class base:public test{}; //now you can acess protected data member and memeber function
+
+// example
+#include<iostream>
+using namespace std;
+class a{
+    protected:
+    int a=90;
+    int b=40;
+    int show(){
+        return a+b;
+    }
+};
+class b:public a{
+    public:
+    void print(){
+        cout<<"ans is "<<show();
+    }
+};
+int main(){
+    b b1;
+    b1.print();
+}
+
+
 
 
 
